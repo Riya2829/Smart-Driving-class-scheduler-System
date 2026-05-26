@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+        url("../images/driving-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body p{
+    text-align: center;
+}
+
+.slots-container {
+    width: 80%;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.slots-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.slots-table th {
+    background: #222;
+    color: rgb(202, 187, 187);
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #706969;
+    border-left: 1px solid #706969;
+    border-right: 1px solid #706969
+}
+
+.slots-table td {
+    padding: 15px;
+    background: rgba(255,255,255,0.7);
+    border-bottom: 1px solid #706969;
+    border-left: 1px solid #706969;
+    border-right: 1px solid #706969
+}
+
+.book-btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-btn:hover {
+    background: #0056b3;
+}
+

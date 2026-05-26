@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>View Slots</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/viewslots.css') }}">
+</head>
+
+<body>
+
+<div class="slots-container">
+
+    <h2>Available Slots</h2>
+
+    <table class="slots-table">
+
+        <thead>
+            <tr>
+                <th>Instructor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Capacity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for slot in slots %}
+            <tr>
+                <td>{{ slot[1] }}</td>
+                <td>{{ slot[2] }}</td>
+                <td>{{ slot[3] }}</td>
+                <td>
+    
+    {{ slot[5] }}/{{ slot[4] }}
+                </td>
+                <td>
+                    <a href="/book/{{ slot[0] }}" class="book-btn">
+                        Book
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>

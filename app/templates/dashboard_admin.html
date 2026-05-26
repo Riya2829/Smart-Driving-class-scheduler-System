@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>{{ school_name }} Dashboard</h1>
+
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="dashboard-container">
+
+        <!-- Create Slot Button -->
+        <div class="top-actions">
+            <a href="/create_slot" class="create-btn">
+                ➕Create Slot
+            </a>
+
+            <a href="/view_students" class="student-btn">
+        View Students
+    </a>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title">All Slots</h2>
+
+        <!-- Slot Cards -->
+        {% for slot in slots %}
+
+        <div class="slot-card">
+
+            <p><strong>Instructor :</strong> {{ slot[1] }}</p>
+
+            <p><strong>Date :</strong> {{ slot[2] }}</p>
+
+            <p><strong>Time :</strong> {{ slot[3] }}</p>
+
+            <p>
+                <strong>Status :</strong>
+
+                {% if slot[4] %}
+                    <span class="available">Booked</span>
+                {% else %}
+                    <span class="booked">Available</span>
+                {% endif %}
+            </p>
+
+            <p>
+                <strong>Student :</strong>
+
+                {% if slot[4] %}
+                    {{ slot[4] }}
+                {% else %}
+                    None
+                {% endif %}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

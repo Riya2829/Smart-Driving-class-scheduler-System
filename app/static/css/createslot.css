@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+        url("../images/driving-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.form-container {
+    width: 320px;
+    padding-left: 600px;
+}
+input[type="text"], input[type="date"], input[type="time"],input[type="number"]{
+      width: 100%;
+      padding: 12px 2px;
+      margin-bottom: 1rem;
+      border: 1px solid #777777;
+      border-radius: 10px;
+      background-color: #eff1f3;
+      color: rgb(34, 34, 34);
+      cursor: pointer;
+    }
+    input::placeholder {
+      color: #333333;
+    }
+
+.form-container button {
+      width: 100%;
+      padding: 0.7rem;
+      background: linear-gradient(to right, #efc087, #c98a3f);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }

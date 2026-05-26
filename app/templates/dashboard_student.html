@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student_dashboard.css') }}">
+</head>
+
+<body>
+<div class="navbar">
+<h2>Student Dashboard 🚗</h2>
+
+
+<a href="/logout" class="logout-btn">Logout</a>
+</div>
+
+<hr>
+<div class="book-btn-container">
+    <a href="/view_slots" class="book-btn">📅 Book New Slot</a>
+</div>
+
+<div class="dashboard-container">
+<h3 class="section-title">My Bookings</h3>
+
+{% for b in bookings %}
+<div class="bookings">
+    <p><b>Instructor:</b> {{ b[1] }}</p>
+    <p><b>Date:</b> {{ b[2] }}</p>
+    <p><b>Time:</b> {{ b[3] }}</p>
+
+    <a href="/cancel/{{ b[0] }}">❌ Cancel</a>
+</div>
+
+{% else %}
+<p>No bookings yet</p>
+</div>
+{% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    
+    <title>Register</title>
+</head>
+
+<body>
+
+<h2>Register</h2>
+
+<form method="POST">
+
+<div class="form-container">
+
+    <input type="text" name="name" placeholder="Name" required><br>
+
+    <input type="email" name="email" placeholder="Email" required><br>
+
+    <input type="password" name="password" placeholder="Password" required><br>
+
+    <select name="role" id="role" onchange="toggleSchool()">
+        <option value="student">Student</option>
+        <option value="admin">Driving School Admin</option>
+    </select>
+
+    <br><br>
+
+    <!-- School Dropdown -->
+    <div id="school_div">
+        <select name="school_id">
+            {% for school in schools %}
+                <option value="{{ school[0] }}">{{ school[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <br>
+
+    <button type="submit">Register</button>
+<a href="/login">Login</a>
+</div>
+
+</form>
+
+<br>
+
+
+
+<script>
+
+function toggleSchool() {
+
+    let role = document.getElementById("role").value;
+    let schoolDiv = document.getElementById("school_div");
+
+    if (role === "admin") {
+        schoolDiv.style.display = "none";
+    } 
+    
+    else {
+        schoolDiv.style.display = "block";
+    }
+}
+
+window.onload = toggleSchool;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Slot</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/createslot.css') }}">
+</head>
+<body>
+<h2>Create Slot</h2>
+<form method="POST">
+    <div class="form-container">
+    <input type="text" name="instructor" placeholder="Instructor Name" required><br>
+    <input type="date" name="date" required><br>
+    <input type="time" name="time" required><br>
+    <input type="number" name="capacity" placeholder="Slot Capacity" min="1" required>
+    <button type="submit">Create Slot</button>
+    </div>
+    
+</form>
+</body>
+</html>

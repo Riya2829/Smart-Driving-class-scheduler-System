@@ -1,0 +1,76 @@
+ body {
+      background: #e2ddd7;
+      font-family: 'Segoe UI', sans-serif;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+      color: #b87333; 
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: #000000;
+      margin-bottom: 2rem;
+    }
+
+    
+    .form-container {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      width: 320px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    input[type="password"], input[type="email"]{
+      width: 100%;
+      padding: 12px 2px;
+      margin-bottom: 1rem;
+      border: 1px solid #777777;
+      border-radius: 10px;
+      background-color: #eff1f3;
+      color: rgb(34, 34, 34);
+      cursor: pointer;
+    }
+    input::placeholder {
+      color: #333333;
+    }
+    
+
+    .form-container button {
+      width: 100%;
+      padding: 0.7rem;
+      background: linear-gradient(to right, #efc087, #c98a3f);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .form-container p {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .form-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #451f6a;
+    text-decoration: none;
+    
+}
+    
+
